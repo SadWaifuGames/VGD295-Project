@@ -21,6 +21,10 @@ public class DragAndDrop : MonoBehaviour
     //particle when die
     public GameObject deathEffect;
 
+    private AudioSource source;
+
+    public AudioClip[] audioClips;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +32,9 @@ public class DragAndDrop : MonoBehaviour
         col = GetComponent<Collider2D>();
         madSprite.SetActive(false);
         rp = GetComponent<RandomPatrol>();
-        
+        source = GetComponent<AudioSource>();
+
+
     }
 
     // Update is called once per frame
@@ -50,6 +56,8 @@ public class DragAndDrop : MonoBehaviour
                 Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
                 if (col == touchedCollider)
                 {
+                    source.clip = audioClips[Random.Range(0, audioClips.Length)];
+                    source.Play();
                     Instantiate(selectionEffect, transform.position, Quaternion.identity);
                     //we touched a fish with this script on it
                     moveAllowed = true;
@@ -83,6 +91,7 @@ public class DragAndDrop : MonoBehaviour
             if (collision.tag == "Fish")
             {
 
+            source.Play();
             gm.GameOver();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             madSprite.SetActive(true);

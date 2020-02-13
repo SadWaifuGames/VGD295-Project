@@ -16,6 +16,10 @@ public class GrowFish : MonoBehaviour
 
     public GameObject madSprite;
 
+    private AudioSource source;
+
+    public AudioClip[] audioClips;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,7 @@ public class GrowFish : MonoBehaviour
         col = GetComponent<Collider2D>();
         //gets the starting size of the fish
         temp = transform.localScale;
-
+        source = GetComponent<AudioSource>();
         madSprite.SetActive(false);
     }
 
@@ -47,6 +51,8 @@ public class GrowFish : MonoBehaviour
                 Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
                 if (col == touchedCollider)
                 {
+                    source.clip = audioClips[Random.Range(0, audioClips.Length)];
+                    source.Play();
                     //we touched a fish with this script on it
                     moveAllowed = true;
 

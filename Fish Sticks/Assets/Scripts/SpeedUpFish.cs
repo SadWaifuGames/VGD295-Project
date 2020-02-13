@@ -15,6 +15,10 @@ public class SpeedUpFish : MonoBehaviour
     private GameMaster gm;
     public GameObject madSprite;
 
+    private AudioSource source;
+
+    public AudioClip[] audioClips;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class SpeedUpFish : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         col = GetComponent<Collider2D>();
         madSprite.SetActive(false);
-
+        source = GetComponent<AudioSource>();
 
     }
 
@@ -45,6 +49,8 @@ public class SpeedUpFish : MonoBehaviour
                 Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
                 if (col == touchedCollider)
                 {
+                    source.clip = audioClips[Random.Range(0, audioClips.Length)];
+                    source.Play();
                     //we touched a fish with this script on it
                     moveAllowed = true;
                     speedIncrease = speedIncrease * 1.5f;
