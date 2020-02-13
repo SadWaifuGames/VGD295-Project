@@ -103,6 +103,8 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   secondsToMaxDifficulty: 60
+  loseScreen: {fileID: 0}
+  madFishSprite: {fileID: 2275302959879007376}
 --- !u!114 &3809951426762831325
 MonoBehaviour:
   m_ObjectHideFlags: 0

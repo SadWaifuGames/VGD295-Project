@@ -23,12 +23,9 @@ public class RandomPatrol : MonoBehaviour
     //ramp up difficulty variable
     public float secondsToMaxDifficulty;
 
-    //grab the canvas Item to be disabled on start and enabled on end of game
-    public GameObject loseScreen;
-
-    //sprite to switch to when collided
-    public GameObject madFishSprite;
-
+    
+    
+    
     //position the objects should move to
     Vector2 targetPosition;
 
@@ -36,8 +33,7 @@ public class RandomPatrol : MonoBehaviour
     void Start()
     {
         targetPosition = GetRandomPosition();
-        loseScreen.SetActive(false);
-        madFishSprite.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -57,7 +53,7 @@ public class RandomPatrol : MonoBehaviour
         
     }
 
-    //function that gets a rondom position for the fish to go to
+    //function that gets a random position for the fish to go to
     Vector2 GetRandomPosition()
     {
         float randomX = Random.Range(minX, maxX);
@@ -66,15 +62,7 @@ public class RandomPatrol : MonoBehaviour
         return new Vector2(randomX, randomY);
     }
 
-    //detect if the fishes have collided
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Fish")
-        {
-            loseScreen.SetActive(true);
-            madFishSprite.SetActive(true);
-        }
-    }
+    
 
     //calculates the percentage to max difficulty
     float GetDifficultyPercent()

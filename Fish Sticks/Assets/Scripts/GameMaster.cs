@@ -5,6 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
+    public GameObject loseScreen;
+      
+
+
+    public void GameOver()
+    {
+        Invoke("Delay", 1.5f);
+        
+    }
+
+    void Delay()
+    {
+        loseScreen.SetActive(true);
+    }
+
     public void GoToGameScene()
     {
         SceneManager.LoadScene("LevelMenu");

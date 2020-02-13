@@ -7,13 +7,28 @@ public class DragAndDrop : MonoBehaviour
     //this script detects if we are allowed to drag the fish or not and detect collisions between fish
     //variables
     bool moveAllowed;
+    
     Collider2D col;
 
-    
+    private GameMaster gm;
+    public GameObject madSprite;
+    private RandomPatrol rp;
+
+
+    //particle effects
+    //particle when touched
+    public GameObject selectionEffect;
+    //particle when die
+    public GameObject deathEffect;
+
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         col = GetComponent<Collider2D>();
+        madSprite.SetActive(false);
+        rp = GetComponent<RandomPatrol>();
+        
     }
 
     // Update is called once per frame
@@ -35,6 +50,7 @@ public class DragAndDrop : MonoBehaviour
                 Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
                 if (col == touchedCollider)
                 {
+                    Instantiate(selectionEffect, transform.position, Quaternion.identity);
                     //we touched a fish with this script on it
                     moveAllowed = true;
                 }
@@ -57,6 +73,23 @@ public class DragAndDrop : MonoBehaviour
                 moveAllowed = false;
             }
         }
+        
+        
 
     }
+    //detect if the fishes have collided
+    private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.tag == "Fish")
+            {
+
+            gm.GameOver();
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            madSprite.SetActive(true);
+            rp.enabled = false;
+            moveAllowed = false;
+            this.enabled = false;
+            
+            }
+        }
 }
