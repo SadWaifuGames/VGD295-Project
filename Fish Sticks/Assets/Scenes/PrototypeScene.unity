@@ -120,43 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &240766581 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2275302959879007376, guid: 62c2d0e65bdc4724c825d079aa193c86,
-    type: 3}
-  m_PrefabInstance: {fileID: 345288956}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &240766582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240766581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c87c708a19577e49bfe771ba6c66f2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &240766583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240766581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2c40a17dac23142882e1d4159ac131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: -8.04
-  maxX: 8.04
-  minY: -4.19
-  maxY: 4.19
-  loseScreen: {fileID: 1545199666}
-  madFishSprite: {fileID: 5340865930555300171, guid: 0169f2c731e34fa4aa6e994c3b75564c,
-    type: 3}
 --- !u!1 &257023962
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,25 +343,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2275302959879007375, guid: 62c2d0e65bdc4724c825d079aa193c86,
+    - target: {fileID: 2275302959879007374, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
-      propertyPath: loseScreen
-      value: 
-      objectReference: {fileID: 1545199666}
-    - target: {fileID: 2275302959879007375, guid: 62c2d0e65bdc4724c825d079aa193c86,
+      propertyPath: m_LocalScale.x
+      value: 2.069344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275302959879007374, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
-      propertyPath: madFishSprite
-      value: 
-      objectReference: {fileID: 5340865930555300171, guid: 0169f2c731e34fa4aa6e994c3b75564c,
+      propertyPath: m_LocalScale.y
+      value: 2.069344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275302959879007374, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.069344
+      objectReference: {fileID: 0}
     - target: {fileID: 2275302959879007376, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
       propertyPath: m_Name
       value: Circle (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3809951426762831325, guid: 62c2d0e65bdc4724c825d079aa193c86, type: 3}
-    - {fileID: 2275302959879007375, guid: 62c2d0e65bdc4724c825d079aa193c86, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62c2d0e65bdc4724c825d079aa193c86, type: 3}
 --- !u!1 &378972363
 GameObject:
@@ -518,6 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeIncrease: 0.1
+  madSprite: {fileID: 0}
 --- !u!1001 &480194512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -683,12 +649,12 @@ PrefabInstance:
     - target: {fileID: 2275302959879007374, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.96
+      value: -8.42
       objectReference: {fileID: 0}
     - target: {fileID: 2275302959879007374, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.16
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2275302959879007374, guid: 62c2d0e65bdc4724c825d079aa193c86,
         type: 3}
@@ -825,6 +791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lose Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323465526610460160, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1323465526610460161, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
         type: 3}
@@ -964,6 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeIncrease: 0.1
+  madSprite: {fileID: 0}
 --- !u!1 &1816056937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2275302959879007376, guid: 62c2d0e65bdc4724c825d079aa193c86,
@@ -983,6 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeIncrease: 0.1
+  madSprite: {fileID: 0}
 --- !u!1001 &2275302959846679582
 PrefabInstance:
   m_ObjectHideFlags: 0

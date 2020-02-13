@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2275302959879007374}
   - component: {fileID: 2275302959879007377}
-  - component: {fileID: 2275302959879007375}
-  - component: {fileID: 3809951426762831325}
   - component: {fileID: 4207818932390553608}
   - component: {fileID: 4726791296844859558}
+  - component: {fileID: 240766582}
+  - component: {fileID: 240766583}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Fish
@@ -84,39 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2275302959879007375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2275302959879007376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 811968151922c1c419d69bc0f79ed772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: -8.04
-  maxX: 8.05
-  minY: -4.19
-  maxY: 4.18
-  minSpeed: 2
-  maxSpeed: 5
-  secondsToMaxDifficulty: 60
-  loseScreen: {fileID: 0}
-  madFishSprite: {fileID: 2275302959879007376}
---- !u!114 &3809951426762831325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2275302959879007376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82a6ba917f50aaf4aa64688ede97cb8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &4207818932390553608
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -154,3 +121,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &240766582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275302959879007376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c87c708a19577e49bfe771ba6c66f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  madSprite: {fileID: 0}
+--- !u!114 &240766583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275302959879007376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2c40a17dac23142882e1d4159ac131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: -8.04
+  maxX: 8.04
+  minY: -4.19
+  maxY: 4.19
