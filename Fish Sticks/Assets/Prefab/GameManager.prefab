@@ -43,3 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0d93d61369fa84a9c8c2fd34973c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseScreen: {fileID: 0}
+  oneStar: {fileID: 0}
+  twoStar: {fileID: 0}
+  threeStar: {fileID: 0}
+  score: {fileID: 0}
+  playerScore: 0
+  starCount: 0
