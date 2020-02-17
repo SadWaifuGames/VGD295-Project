@@ -89,4 +89,15 @@ public class GameMaster : MonoBehaviour
     {
         SceneManager.LoadScene("Level1.1");
     }
+
+    public void LoadSceneTwo()
+    {
+        SceneManager.LoadScene("Level1.2");
+    }
+
+    public void LoadSceneThree()
+    {
+        SceneManager.LoadScene("Level1.3");
+    }
+    
 }

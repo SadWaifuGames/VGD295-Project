@@ -19,6 +19,7 @@ public class SpeedUpFish : MonoBehaviour
 
     public AudioClip[] audioClips;
 
+    private SpeedRandomPatrol srp;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class SpeedUpFish : MonoBehaviour
         col = GetComponent<Collider2D>();
         madSprite.SetActive(false);
         source = GetComponent<AudioSource>();
+        srp = GetComponent<SpeedRandomPatrol>();
 
     }
 
@@ -85,6 +87,7 @@ public class SpeedUpFish : MonoBehaviour
         {
             gm.GameOver();
             madSprite.SetActive(true);
+            srp.enabled = false;
         }
     }
 }

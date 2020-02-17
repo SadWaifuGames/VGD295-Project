@@ -656,6 +656,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0d93d61369fa84a9c8c2fd34973c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseScreen: {fileID: 0}
+  oneStar: {fileID: 0}
+  twoStar: {fileID: 0}
+  threeStar: {fileID: 0}
+  score: {fileID: 0}
+  playerScore: 0
+  starCount: 0
+  levelCount: 0
 --- !u!4 &539480639
 Transform:
   m_ObjectHideFlags: 0
@@ -834,16 +842,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847311707}
-  m_LocalRotation: {x: -0, y: -0, z: 0.17791983, w: 0.984045}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9035441, w: -0.42849523}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5430307, y: 2.5430307, z: 2.5430307}
   m_Children: []
   m_Father: {fileID: 1999457901}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20.497002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 489.256}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 683, y: 379}
+  m_AnchoredPosition: {x: 683, y: 343}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847311709
