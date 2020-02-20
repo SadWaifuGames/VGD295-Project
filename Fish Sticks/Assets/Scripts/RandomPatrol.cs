@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class RandomPatrol : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class RandomPatrol : MonoBehaviour
     //how fast the object moves
     float speed;
 
+    
     //ramp up difficulty variable
     public float secondsToMaxDifficulty;
 
@@ -39,6 +40,7 @@ public class RandomPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //checks position and moves the object towards it
         if ((Vector2)transform.position != targetPosition)
         {

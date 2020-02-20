@@ -28,14 +28,14 @@ RectTransform:
   m_GameObject: {fileID: 1323465525141850889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1375608, y: 1.1375608, z: 1.1375608}
+  m_LocalScale: {x: 0.64127773, y: 0.64127773, z: 0.64127773}
   m_Children: []
   m_Father: {fileID: 1323465526610460161}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -206}
+  m_AnchoredPosition: {x: 562, y: -319}
   m_SizeDelta: {x: 565.2, y: 224.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1323465525141850893
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Menu
+  m_text: 'Menu  >
 
 '
   m_isRightToLeft: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -133,12 +133,12 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 101.99209, z: 0, w: 0}
+  m_margin: {x: 178.1723, y: 147.85826, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1323465525141850892}
-    characterCount: 5
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 1
+    spaceCount: 3
     wordCount: 1
     linkCount: 0
     lineCount: 1
@@ -241,14 +241,14 @@ RectTransform:
   m_GameObject: {fileID: 1323465525412589666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8249087, y: 1.8249087, z: 1.8249087}
+  m_LocalScale: {x: 1.2121774, y: 1.2121774, z: 1.2121774}
   m_Children: []
   m_Father: {fileID: 1323465526610460161}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: 113}
+  m_AnchoredPosition: {x: 57, y: -232}
   m_SizeDelta: {x: 565.2, y: 224.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1323465525412589670
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 34.70419, z: 120.71022, w: 113.74457}
+  m_margin: {x: 0, y: 32.45, z: 120.71022, w: 151.82088}
   m_textInfo:
     textComponent: {fileID: 1323465525412589665}
     characterCount: 7
@@ -435,6 +435,11 @@ GameObject:
   - component: {fileID: 1323465526610460161}
   - component: {fileID: 1323465526610460167}
   - component: {fileID: 1323465526610460166}
+  - component: {fileID: 1797583007}
+  - component: {fileID: 1797583006}
+  - component: {fileID: 276745589680080441}
+  - component: {fileID: 3782639130088389085}
+  - component: {fileID: 4823763078230693646}
   m_Layer: 5
   m_Name: Lose Screen
   m_TagString: Untagged
@@ -455,6 +460,7 @@ RectTransform:
   m_Children:
   - {fileID: 1323465525412589667}
   - {fileID: 1323465525141850894}
+  - {fileID: 5657386130944916753}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -484,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32777512, g: 0.3254272, b: 0.9716981, a: 0.392}
+  m_Color: {r: 0.28109646, g: 0.27901387, b: 0.6226415, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -499,3 +505,365 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!82 &1797583007
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323465526610460160}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1797583006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323465526610460160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c201327dcd25736489df1f855f48ba60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 78d7242cf119f7a41b807ef094170f43, type: 3}
+  - {fileID: 8300000, guid: c93b9d4ce0505b047a191199345245fc, type: 3}
+  - {fileID: 8300000, guid: 71f532147359b4140bc300c1e050e8a8, type: 3}
+  - {fileID: 8300000, guid: f34609ac9c2ce36418e227e41f01684f, type: 3}
+  - {fileID: 8300000, guid: a4da6ed147670ef4b88ca25868099905, type: 3}
+  - {fileID: 8300000, guid: c82b3a6c2c5f5ef418e2e27866ceb111, type: 3}
+--- !u!114 &276745589680080441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323465526610460160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acd3361369823d4487135adad0d8bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishText: {fileID: 5448292407349742723}
+  fishFacts:
+  - Only the female Angler fish have a luminescent antenna like lure for attracting
+    food
+  - "Angler fish\u2019s antenna glow at the end due to bacteria living inside the
+    luminescent bulb"
+  - Male Angler fish do not have a luminescent antenna and therefore latch onto the
+    females by biting them in order to survive
+  - "Clownfish live in sea anemones which have poisonous tentacles but don\u2019t
+    harm the Clownfish because they have a mucous layer protecting them"
+  - Puffer fish have enough toxins to kill around thirty humans
+  - Puffer fish bloat themselves into a ball like shape to intimidate predators
+  - Puffer fish do not have scales but instead have sharp spines that are almost hidden
+    within the skin until the puffer fish bloats itself
+  - Flounders can change the color of their skin within seconds to blend into the
+    environment
+  - Flounders are nocturnal and lie in wait motionless on the sea floor waiting to
+    ambush prey
+  - "Flounders are flat and oval like with two eyes on one side of the fish\u2019s
+    face"
+  - Blue Tang fish are important to the coral reefs because they eat the algae off
+    of the coral surface
+  - Blue Tang fish have incredibly sharp fins that are harmful if grabbed or touched
+  - Blue Tang males battle for dominance using their sharp spines as swords
+  - When threatened Blue Tang fish will play dead by lying on the ocean floor
+  - Starfish are brainless and bloodless as well as can live up to thirty-five years
+  - "A starfish\u2019s stomach protrudes from its body to eat and absorb its food
+    before returning inside the starfish"
+  - Starfish can regenerate or regrow limbs but can take up to a year to do so
+  - Jellyfish are brainless, bloodless and boneless but have long tentacles that sting
+    and paralize its victims
+  - Jellyfish eat and dispose of waste through one hole, the mouth
+  - Blobfish do not have teeth so they scour the ocean floor to suck in any prey
+  - Blobfish look like ordinary fish in the ocean but when out of the water they sag
+    into a sad looking puddle
+  - "Sea turtles can\u2019t retract back into their shell-like land turtles can"
+  - Baby Sea Turtles gender depends on the climate temperature of the nests. The warmer
+    the location means females and the colder means males
+  - Sea turtles can live up to 100 years old and can hold their breath for up to 5
+    hours
+  - Octopus has three hearts and can change their color to blend into the background
+  - Octopus tend to shoot out a black ink like substance when threatened in order
+    to ninja away
+--- !u!82 &3782639130088389085
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323465526610460160}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &4823763078230693646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323465526610460160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c201327dcd25736489df1f855f48ba60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 78d7242cf119f7a41b807ef094170f43, type: 3}
+  - {fileID: 8300000, guid: c93b9d4ce0505b047a191199345245fc, type: 3}
+  - {fileID: 8300000, guid: 71f532147359b4140bc300c1e050e8a8, type: 3}
+  - {fileID: 8300000, guid: f34609ac9c2ce36418e227e41f01684f, type: 3}
+  - {fileID: 8300000, guid: a4da6ed147670ef4b88ca25868099905, type: 3}
+  - {fileID: 8300000, guid: c82b3a6c2c5f5ef418e2e27866ceb111, type: 3}
+--- !u!1 &8035298142439818374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5657386130944916753}
+  - component: {fileID: 3723829468957806251}
+  - component: {fileID: 5448292407349742723}
+  m_Layer: 5
+  m_Name: Fish Fact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5657386130944916753
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035298142439818374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0394185, y: 1.539013, z: 0.36701828}
+  m_Children: []
+  m_Father: {fileID: 1323465526610460161}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -28}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3723829468957806251
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035298142439818374}
+  m_CullTransparentMesh: 0
+--- !u!114 &5448292407349742723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035298142439818374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.990566, g: 0.9578586, b: 0.9578586, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Puffer fish have enough toxins to kill around thirty humans

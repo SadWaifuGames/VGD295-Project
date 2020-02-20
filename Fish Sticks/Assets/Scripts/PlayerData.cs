@@ -13,7 +13,7 @@ public class PlayerData
     public PlayerData (GameMaster gameMaster)
     {
         level = gameMaster.levelCount;
-        score = gameMaster.playerScore;
+        score = gameMaster.score;
         stars = gameMaster.starCount;
     }
 }

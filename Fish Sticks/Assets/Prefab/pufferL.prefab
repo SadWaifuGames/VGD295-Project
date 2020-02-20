@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf02170018516314a8f952e2b72c6343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeIncrease: 0.1
+  sizeIncrease: 0.05
   madSprite: {fileID: 8507122265248982476}
   audioClips:
   - {fileID: 8300000, guid: 882f4bad646bafe4d89379c394bc7e7f, type: 3}

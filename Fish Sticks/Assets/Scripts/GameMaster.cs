@@ -1,31 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour
 {
-    public GameObject loseScreen;
+    public GameObject deathScreen;
     public GameObject oneStar;
     public GameObject twoStar;
     public GameObject threeStar;
+    public GameObject gameManager;
 
 
-    public Text score;
+    public Text scoreText;
     private bool hasLost;
-    public float playerScore;
-    string playerScoreString;
+    public float score = 0.0f;
+    
     public int starCount;
     public int levelCount;
 
-    void Awake ()
+    void Start()
     {
-        playerScore = 0.0f;
+        //gameManager = GetComponent<GameMaster>();
+       
         starCount = 0;
         oneStar.SetActive(false);
         twoStar.SetActive(false);
         threeStar.SetActive(false);
+        deathScreen.SetActive(false);
     }
       
     private void Update()
@@ -33,27 +36,27 @@ public class GameMaster : MonoBehaviour
         
         if (hasLost == false)
         {
-           playerScore = Time.time * 4f;
-           playerScoreString = playerScore.ToString("F0");
-           score.text = "Score:  " + playerScoreString;
+            score += Time.deltaTime * 4f;
+            scoreText.text = ("Score: "  + (int)score).ToString();
 
-           if (playerScore >= 50f)
+            if (score >= 50f)
             {
                 oneStar.SetActive(true);
                 starCount++;
             }
-            if (playerScore >= 100f)
+            if (score >= 100f)
             {
                 twoStar.SetActive(true);
                 starCount++;
                 levelCount++;
             }
-            if (playerScore >= 150f)
+            if (score >= 150f)
             {
                 threeStar.SetActive(true);
                 starCount++;
             }
         }
+        
 
         
     }
@@ -67,37 +70,9 @@ public class GameMaster : MonoBehaviour
 
     void Delay()
     {
-        loseScreen.SetActive(true);
+        deathScreen.SetActive(true);
     }
 
-    public void GoToGameScene()
-    {
-        SceneManager.LoadScene("LevelMenu");
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("LevelMenu");
-    }
-
-    public void LoadSceneOne()
-    {
-        SceneManager.LoadScene("Level1.1");
-    }
-
-    public void LoadSceneTwo()
-    {
-        SceneManager.LoadScene("Level1.2");
-    }
-
-    public void LoadSceneThree()
-    {
-        SceneManager.LoadScene("Level1.3");
-    }
+   
     
 }

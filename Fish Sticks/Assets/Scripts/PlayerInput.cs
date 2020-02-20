@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragAndDrop : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
-    //this script detects if we are allowed to drag the fish or not and detect collisions between fish
-    //variables
     bool moveAllowed;
     
-    Collider2D col;
-
-    private GameMaster gm;
-    public GameObject madSprite;
-    private RandomPatrol rp;
+    
     private bool isDead = false;
 
     //particle effects
@@ -26,15 +20,16 @@ public class DragAndDrop : MonoBehaviour
     public AudioClip[] audioClips;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        col = GetComponent<Collider2D>();
-        madSprite.SetActive(false);
-        rp = GetComponent<RandomPatrol>();
+        
+        
         source = GetComponent<AudioSource>();
-
-
     }
 
     // Update is called once per frame
@@ -45,18 +40,18 @@ public class DragAndDrop : MonoBehaviour
         //tracking if there is a finger touching the screen
         //touchCount uses a 0,1,2 index to determine how many fingers are touching the screen
         //we only want to let the player move one fish at a time using only one finger so we will pass in 0
-        if (Input.touchCount >0)//we are touching the screen
+        if (Input.touchCount > 0)//we are touching the screen
         {
             Touch touch = Input.GetTouch(0);
             //where did that touch take place? (show me on this doll lmao)
             Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
-            if(touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began)
             {
                 //tests if we just touched the screen
                 //store the collider component of whatever we touched
                 Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
-                if (col == touchedCollider)
+                if (touchedCollider.gameObject.tag == "Fish")
                 {
                     source.clip = audioClips[Random.Range(0, audioClips.Length)];
                     source.Play();
@@ -83,31 +78,6 @@ public class DragAndDrop : MonoBehaviour
                 moveAllowed = false;
             }
         }
-        
-        
 
-    }
-    //detect if the fishes have collided
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Fish")
-        {
-
-            source.Play();
-            gm.GameOver();
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            madSprite.SetActive(true);
-            rp.enabled = false;
-            moveAllowed = false;
-            this.enabled = false;
-            
-        }
-    
-    }
-
-    private void Death()
-    {
-        isDead = true;
-        GetComponent<Score>().OnDeath();
     }
 }
