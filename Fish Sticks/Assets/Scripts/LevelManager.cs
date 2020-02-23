@@ -36,4 +36,24 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level1.3");
     }
+
+    public void LoadShop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+
+    public void LoadLibrary()
+    {
+        SceneManager.LoadScene("Library");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
