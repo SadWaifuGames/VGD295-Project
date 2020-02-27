@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadSceneTwo()
     {
-        SceneManager.LoadScene("Level1.2");
+        SceneManager.LoadScene("level2.1");
     }
 
     public void LoadSceneThree()
