@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5450217775804434254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 6757661512205461182}
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ddeb289d33e08564cb460f99d796a142, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba4d73ec4ba912a47ba4ab01ea3fcc2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -161,8 +161,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.24, y: 1.39}
+  m_Offset: {x: 0.2690411, y: 0.033636063}
+  m_Size: {x: 8.183648, y: 8.183648}
   m_Direction: 1
 --- !u!82 &758242716003100085
 AudioSource:
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 6757661512205461182}
   - component: {fileID: 2605339684654334879}
   m_Layer: 0
-  m_Name: ClownMad
+  m_Name: LionFishDR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: d1128f84aa4701d41af65fcf0e7c6537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43143a466059a9c4fa407082e221e08b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

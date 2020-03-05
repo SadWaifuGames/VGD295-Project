@@ -10,7 +10,7 @@ public class DragAndDrop : MonoBehaviour
     
     Collider2D col;
 
-    private GameMaster gm;
+    private Player player;
     public GameObject madSprite;
     private RandomPatrol rp;
     private bool isDead = false;
@@ -20,6 +20,7 @@ public class DragAndDrop : MonoBehaviour
     public GameObject selectionEffect;
     //particle when die
     public GameObject deathEffect;
+    
 
     private AudioSource source;
 
@@ -28,7 +29,7 @@ public class DragAndDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         col = GetComponent<Collider2D>();
         madSprite.SetActive(false);
         rp = GetComponent<RandomPatrol>();
@@ -94,20 +95,23 @@ public class DragAndDrop : MonoBehaviour
         {
 
             source.Play();
-            gm.GameOver();
+            player.GameOver();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             madSprite.SetActive(true);
             rp.enabled = false;
             moveAllowed = false;
             this.enabled = false;
-            
+
         }
-    
+       
+
+
     }
 
     private void Death()
     {
         isDead = true;
         GetComponent<Score>().OnDeath();
+        
     }
 }

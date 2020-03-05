@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    private PlayerData player;
+
     // Start is called before the first frame update
     public void GoToGameScene()
     {
         SceneManager.LoadScene("LevelMenu");
+        SaveSystem.SavePlayer(player);
     }
 
     public void Restart()

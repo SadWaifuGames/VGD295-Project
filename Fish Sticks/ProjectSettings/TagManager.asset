@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fish
   - GM
+  - Worm
   layers:
   - Default
   - TransparentFX

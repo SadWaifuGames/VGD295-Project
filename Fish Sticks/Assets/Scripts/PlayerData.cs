@@ -9,11 +9,17 @@ public class PlayerData
     public int level;
     public float score;
     public int stars;
+    private PlayerData player;
 
-    public PlayerData (GameMaster gameMaster)
+    public PlayerData (Player player)
     {
-        level = gameMaster.levelCount;
-        score = gameMaster.score;
-        stars = gameMaster.starCount;
+        level = player.level;
+        score = player.score;
+        stars = player.starCount;
+    }
+
+    public PlayerData(PlayerData player)
+    {
+        this.player = player;
     }
 }

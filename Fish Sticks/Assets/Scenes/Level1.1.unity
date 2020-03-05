@@ -1665,36 +1665,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8372666636978227346, guid: 980c7a95651a6aa48a33e059adcc93e7,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8372666636978227347, guid: 980c7a95651a6aa48a33e059adcc93e7,
+    - target: {fileID: 5838719703869878179, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 1797583002}
-    - target: {fileID: 8372666636978227347, guid: 980c7a95651a6aa48a33e059adcc93e7,
+    - target: {fileID: 5838719703869878179, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: oneStar
       value: 
       objectReference: {fileID: 369863287}
-    - target: {fileID: 8372666636978227347, guid: 980c7a95651a6aa48a33e059adcc93e7,
+    - target: {fileID: 5838719703869878179, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: twoStar
       value: 
       objectReference: {fileID: 2139599415}
-    - target: {fileID: 8372666636978227347, guid: 980c7a95651a6aa48a33e059adcc93e7,
+    - target: {fileID: 5838719703869878179, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: threeStar
       value: 
       objectReference: {fileID: 1088474258}
-    - target: {fileID: 8372666636978227347, guid: 980c7a95651a6aa48a33e059adcc93e7,
+    - target: {fileID: 5838719703869878179, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 845779279}
+    - target: {fileID: 8372666636978227346, guid: 980c7a95651a6aa48a33e059adcc93e7,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8372666636978227356, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: m_LocalPosition.x

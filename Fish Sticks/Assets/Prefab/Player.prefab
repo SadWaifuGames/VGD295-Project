@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8372666636978227356}
-  - component: {fileID: 8372666636978227347}
+  - component: {fileID: 5838719703869878179}
   m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GM
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8372666636978227347
+--- !u!114 &5838719703869878179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,15 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8372666636978227346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0d93d61369fa84a9c8c2fd34973c07, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c1d734ac6aa33345b5ede89d6136f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  starCount: 0
   deathScreen: {fileID: 0}
   oneStar: {fileID: 0}
   twoStar: {fileID: 0}
   threeStar: {fileID: 0}
-  gameManager: {fileID: 8372666636978227346}
   scoreText: {fileID: 0}
   score: 0
-  starCount: 0
-  levelCount: 0
