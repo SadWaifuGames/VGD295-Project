@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public Text winText;
 
     int sceneIndex;
-    int levelPassed = 2;
+    int levelPassed = 1;
 
     public GameObject deathScreen;
     public GameObject trophy;
@@ -38,7 +38,11 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        levelPassed = PlayerPrefs.GetInt("LevelPassed");
+        if (levelPassed >= 2)
+        {
+            levelPassed = PlayerPrefs.GetInt("LevelPassed");
+        }
+        //levelPassed = PlayerPrefs.GetInt("LevelPassed");
         deathScreen.SetActive(false);
 
         winScreen.SetActive(false);
@@ -78,6 +82,7 @@ public class Player : MonoBehaviour
             winScreen.SetActive(true);
             Invoke("loadNextLevel", 1f);
             hasLost = true;
+            Debug.Log("the scene index is " + sceneIndex);
         }
     }
 

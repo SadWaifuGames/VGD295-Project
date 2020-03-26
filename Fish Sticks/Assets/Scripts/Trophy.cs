@@ -10,6 +10,7 @@ public class Trophy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Player.instance.YouWin();
+        Debug.Log("you have won");
         foreach (GameObject fish in fish)
         {
             fish.SetActive(false);
