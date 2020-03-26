@@ -7,7 +7,9 @@ public class DragAndDrop : MonoBehaviour
     //this script detects if we are allowed to drag the fish or not and detect collisions between fish
     //variables
     bool moveAllowed;
+
     
+
     Collider2D col;
 
     private Player player;
@@ -89,21 +91,21 @@ public class DragAndDrop : MonoBehaviour
 
     }
     //detect if the fishes have collided
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fish")
         {
 
             source.Play();
-            player.GameOver();
+            Player.instance.GameOver();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             madSprite.SetActive(true);
-            rp.enabled = false;
-            moveAllowed = false;
-            this.enabled = false;
+            
 
         }
-       
+        
+
+
 
 
     }

@@ -7,6 +7,7 @@ TagManager:
   - Fish
   - GM
   - Worm
+  - Trophy
   layers:
   - Default
   - TransparentFX

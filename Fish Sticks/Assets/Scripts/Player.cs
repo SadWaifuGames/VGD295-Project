@@ -2,30 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public int level = 1;
-    public int starCount = 0;
+    public string[] winnerTexts =
+    {
+        "Great Job!",
+        "Way to Go!",
+        "Awesome Sauce!",
+        "Cool Beans!",
+        "Super Duper!",
+    };
+
+    public static Player instance = null;
+    public Text winText;
+
+    int sceneIndex;
+    int levelPassed = 2;
 
     public GameObject deathScreen;
-    public GameObject oneStar;
-    public GameObject twoStar;
-    public GameObject threeStar;
+    public GameObject trophy;
+    public GameObject winScreen;
 
     public Text scoreText;
     private bool hasLost;
     public float score = 0.0f;
+    
 
     void Start()
     {
-        
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
 
-        starCount = 0;
-        oneStar.SetActive(false);
-        twoStar.SetActive(false);
-        threeStar.SetActive(false);
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        levelPassed = PlayerPrefs.GetInt("LevelPassed");
         deathScreen.SetActive(false);
+
+        winScreen.SetActive(false);
+        trophy.SetActive(false);
+
+        string myString = winnerTexts[Random.Range(0, winnerTexts.Length)];
+        winText.text = myString;
+
     }
 
     public void Update()
@@ -36,27 +57,30 @@ public class Player : MonoBehaviour
             score += Time.deltaTime * 4f;
             scoreText.text = ("Score: " + (int)score).ToString();
 
-            if (score >= 50f)
+            
+            if (score >= 20f)
             {
-                oneStar.SetActive(true);
-                starCount++;
-            }
-            if (score >= 100f)
-            {
-                twoStar.SetActive(true);
-                starCount++;
-                level++;
-            }
-            if (score >= 150f)
-            {
-                threeStar.SetActive(true);
-                starCount++;
+                trophy.SetActive(true);
+
             }
         }
 
 
 
     }
+    
+    public void YouWin()
+    {
+        if (levelPassed < sceneIndex)
+        {
+            
+            PlayerPrefs.SetInt("LevelPassed", sceneIndex);
+            winScreen.SetActive(true);
+            Invoke("loadNextLevel", 1f);
+            hasLost = true;
+        }
+    }
+
 
     public void GameOver()
     {
@@ -69,5 +93,10 @@ public class Player : MonoBehaviour
     void Delay()
     {
         deathScreen.SetActive(true);
+    }
+
+    void loadNextLevel ()
+    {
+        SceneManager.LoadScene(sceneIndex + 1);
     }
 }

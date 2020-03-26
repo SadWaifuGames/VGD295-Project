@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    private PlayerData player;
+    
 
     // Start is called before the first frame update
     public void GoToGameScene()
     {
         SceneManager.LoadScene("LevelMenu");
-        SaveSystem.SavePlayer(player);
+        
     }
 
     public void Restart()
@@ -32,12 +32,12 @@ public class LevelManager : MonoBehaviour
 
     public void LoadSceneTwo()
     {
-        SceneManager.LoadScene("level2.1");
+        SceneManager.LoadScene("Level1.3");
     }
 
     public void LoadSceneThree()
     {
-        SceneManager.LoadScene("Level1.3");
+        SceneManager.LoadScene("Level1.4");
     }
 
     public void LoadShop()

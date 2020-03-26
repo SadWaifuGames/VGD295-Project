@@ -43,11 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d734ac6aa33345b5ede89d6136f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  starCount: 0
+  winnerTexts:
+  - Great Job!
+  - Way to Go!
+  - Awesome Sauce!
+  - Cool Beans!
+  - Super Duper!
+  winText: {fileID: 0}
   deathScreen: {fileID: 0}
-  oneStar: {fileID: 0}
-  twoStar: {fileID: 0}
-  threeStar: {fileID: 0}
+  trophy: {fileID: 0}
+  winScreen: {fileID: 0}
   scoreText: {fileID: 0}
   score: 0
