@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tutorial : MonoBehaviour
+public class OneBubbleTutorial : MonoBehaviour
 {
-
     Collider2D col;
     public GameObject bubble;
-    public GameObject bubble2;
     public GameObject fish2;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         col = GetComponent<Collider2D>();
         bubble.SetActive(true);
-        bubble2.SetActive(false);
         fish2.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -36,7 +35,7 @@ public class Tutorial : MonoBehaviour
                 if (col == touchedCollider)
                 {
                     bubble.SetActive(false);
-                    bubble2.SetActive(true);
+                    
                     Invoke("HideBubble", 4f);
                 }
 
@@ -46,7 +45,8 @@ public class Tutorial : MonoBehaviour
 
     void HideBubble()
     {
-        bubble2.SetActive(false);
+        
         fish2.SetActive(true);
     }
 }
+

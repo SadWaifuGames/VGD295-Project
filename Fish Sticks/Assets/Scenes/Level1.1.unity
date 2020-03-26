@@ -574,21 +574,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588755351}
-    - target: {fileID: 1323465525141850895, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 1323465525412589664, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588755351}
-    - target: {fileID: 1323465525412589664, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
     - target: {fileID: 1323465526610460160, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
         type: 3}
       propertyPath: m_Name
