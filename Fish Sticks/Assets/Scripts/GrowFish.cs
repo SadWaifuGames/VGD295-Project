@@ -12,7 +12,7 @@ public class GrowFish : MonoBehaviour
     Vector2 temp;
     public float sizeIncrease = .1f;
 
-    private GameMaster gm;
+    private Player player;
 
     public GameObject madSprite;
 
@@ -23,7 +23,8 @@ public class GrowFish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
         //gets collider attached to fish
         col = GetComponent<Collider2D>();
         //gets the starting size of the fish
@@ -87,7 +88,7 @@ public class GrowFish : MonoBehaviour
     {
         if (collision.tag == "Fish")
         {
-            gm.GameOver();
+            player.GameOver();
             madSprite.SetActive(true);
         }
     }
