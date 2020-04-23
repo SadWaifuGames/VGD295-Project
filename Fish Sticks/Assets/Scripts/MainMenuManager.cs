@@ -48,20 +48,20 @@ public class MainMenuManager : MonoBehaviour
                 grey4.SetActive(false);
                 lock4.SetActive(false);
                 break;
-            //case 5:
-              //  level02Button.interactable = true;
-              //  grey2.SetActive(false);
-              //  lock2.SetActive(false);
-             //   level03Button.interactable = true;
-             //   grey3.SetActive(false);
-             //   lock3.SetActive(false);
-             //   level04Button.interactable = true;
-            //    grey4.SetActive(false);
-            //    lock4.SetActive(false);
-            //    level05Button.interactable = true;
-           //     grey5.SetActive(false);
-           //     lock5.SetActive(false);
-           //     break;
+            case 6:
+                level02Button.interactable = true;
+                grey2.SetActive(false);
+                lock2.SetActive(false);
+                level03Button.interactable = true;
+                grey3.SetActive(false);
+                lock3.SetActive(false);
+                level04Button.interactable = true;
+                grey4.SetActive(false);
+                lock4.SetActive(false);
+                level05Button.interactable = true;
+                grey5.SetActive(false);
+                lock5.SetActive(false);
+                break;
         }
 
     }
@@ -70,6 +70,11 @@ public class MainMenuManager : MonoBehaviour
     public void levelToLoad (int level)
     {
         SceneManager.LoadScene(level);
+    }
+
+    public void loadTutorial()
+    {
+        SceneManager.LoadScene("tutorial");
     }
 
     public void resetPlayerPrefs()
