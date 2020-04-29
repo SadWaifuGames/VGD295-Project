@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     public Text scoreText;
     private bool hasLost;
     public float score = 0.0f;
-    
+    public float difficultyScore;
 
     void Start()
     {
@@ -58,11 +58,11 @@ public class Player : MonoBehaviour
 
         if (hasLost == false)
         {
-            score += Time.deltaTime * 4f;
+            score += Time.deltaTime * 2f;
             scoreText.text = ("Score: " + (int)score).ToString();
 
             
-            if (score >= 20f)
+            if (score >= difficultyScore)
             {
                 trophy.SetActive(true);
 
