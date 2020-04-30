@@ -2,42 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUpFish : MonoBehaviour
+public class MoveTutorial : MonoBehaviour
 {
-    //ADD THIS SCRIPT TO A FISH THAT YOU WANT TO SPEED UP ON TOUCH
-    //MUST ALSO ADD THE SPEED RANDOM PATROL SCRIPT
-    //this script detects if we are allowed to drag the fish or not and detect collisions between fish
-    //variables
     bool moveAllowed;
+
+
+
     Collider2D col;
-    private static float speedIncrease = 1f;
 
-    private Player player;
-    public GameObject madSprite;
-
-    private AudioSource source;
-
-    public AudioClip[] audioClips;
-
-    private SpeedRandomPatrol srp;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         col = GetComponent<Collider2D>();
-        madSprite.SetActive(false);
-        source = GetComponent<AudioSource>();
-        srp = GetComponent<SpeedRandomPatrol>();
-        speedIncrease = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //tracking if there is a finger touching the screen
-        //touchCount uses a 0,1,2 index to determine how many fingers are touching the screen
-        //we only want to let the player move one fish at a time using only one finger so we will pass in 0
         if (Input.touchCount > 0)//we are touching the screen
         {
             Touch touch = Input.GetTouch(0);
@@ -51,12 +33,8 @@ public class SpeedUpFish : MonoBehaviour
                 Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
                 if (col == touchedCollider)
                 {
-                    source.clip = audioClips[Random.Range(0, audioClips.Length)];
-                    source.Play();
-                    //we touched a fish with this script on it
+                    
                     moveAllowed = true;
-                    speedIncrease = speedIncrease * 1.5f;
-                    SpeedRandomPatrol.speed = speedIncrease;
                 }
             }
 
@@ -67,7 +45,6 @@ public class SpeedUpFish : MonoBehaviour
                 {
                     //if we touched a fish we can move, this sets a new position based on where the finger swiped
                     transform.position = new Vector2(touchPosition.x, touchPosition.y);
-                    
                 }
             }
 
@@ -79,15 +56,5 @@ public class SpeedUpFish : MonoBehaviour
             }
         }
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Fish")
-        {
-            player.GameOver();
-            madSprite.SetActive(true);
-            srp.enabled = false;
-        }
     }
 }

@@ -26,14 +26,14 @@ public class SpeedRandomPatrol : MonoBehaviour
     void Start()
     {
         targetPosition = GetRandomPosition();
-       
         speed = 1f;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed = speed++;
+        //speed = speed;
         //checks position and moves the object towards it
         if ((Vector2)transform.position != targetPosition)
         {
