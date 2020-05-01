@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public Button level02Button, level03Button, level04Button, level05Button;
+    public Button level02Button, level03Button, level04Button, level05Button, level06Button, level07Button;
+    
     int levelPassed = 2;
     
 
-    public GameObject grey2, grey3, grey4, grey5, lock2, lock3, lock4, lock5;
+    public GameObject grey2, grey3, grey4, grey5, grey6, grey7, lock2, lock3, lock4, lock5, lock6, lock7;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class MainMenuManager : MonoBehaviour
         level03Button.interactable = false;
         level04Button.interactable = false;
         level05Button.interactable = false;
+        level06Button.interactable = false;
+        level07Button.interactable = false;
 
         switch (levelPassed)
         {
@@ -62,6 +65,41 @@ public class MainMenuManager : MonoBehaviour
                 grey5.SetActive(false);
                 lock5.SetActive(false);
                 break;
+            case 7:
+                level02Button.interactable = true;
+                grey2.SetActive(false);
+                lock2.SetActive(false);
+                level03Button.interactable = true;
+                grey3.SetActive(false);
+                lock3.SetActive(false);
+                level04Button.interactable = true;
+                grey4.SetActive(false);
+                lock4.SetActive(false);
+                level05Button.interactable = true;
+                grey5.SetActive(false);
+                lock5.SetActive(false);
+                grey6.SetActive(false);
+                lock6.SetActive(false);
+                break;
+            case 8:
+                level02Button.interactable = true;
+                grey2.SetActive(false);
+                lock2.SetActive(false);
+                level03Button.interactable = true;
+                grey3.SetActive(false);
+                lock3.SetActive(false);
+                level04Button.interactable = true;
+                grey4.SetActive(false);
+                lock4.SetActive(false);
+                level05Button.interactable = true;
+                grey5.SetActive(false);
+                lock5.SetActive(false);
+                grey6.SetActive(false);
+                lock6.SetActive(false);
+                grey7.SetActive(false);
+                lock7.SetActive(false);
+                break;
+
         }
 
     }
@@ -83,6 +121,8 @@ public class MainMenuManager : MonoBehaviour
         level03Button.interactable = false;
         level04Button.interactable = false;
         level05Button.interactable = false;
+        level06Button.interactable = false;
+        level07Button.interactable = false;
         PlayerPrefs.DeleteAll();
         
     }
