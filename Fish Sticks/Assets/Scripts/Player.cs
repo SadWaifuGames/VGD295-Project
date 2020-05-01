@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
         string myString = winnerTexts[Random.Range(0, winnerTexts.Length)];
         winText.text = myString;
 
+        difficultyScore = Random.Range(30f, 120f);
     }
 
     public void Update()
@@ -84,6 +85,15 @@ public class Player : MonoBehaviour
             hasLost = true;
             Debug.Log("the scene index is " + sceneIndex);
         }
+        if (levelPassed >= 11)
+        {
+            PlayerPrefs.SetInt("LevelPassed", sceneIndex);
+            winScreen.SetActive(true);
+
+            Invoke("loadLevelMenu", 1f);
+            hasLost = true;
+            Debug.Log("the scene index is " + sceneIndex);
+        }
     }
 
 
@@ -103,5 +113,10 @@ public class Player : MonoBehaviour
     void loadNextLevel ()
     {
         SceneManager.LoadScene(sceneIndex + 1);
+    }
+
+    void loadLevelMenu()
+    {
+        SceneManager.LoadScene("LevelMenu");
     }
 }

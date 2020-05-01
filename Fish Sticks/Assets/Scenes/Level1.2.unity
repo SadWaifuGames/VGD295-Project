@@ -779,17 +779,17 @@ PrefabInstance:
     - target: {fileID: 8372666636978227356, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 677.19116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8372666636978227356, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 953.8697
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8372666636978227356, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -165.30405
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8372666636978227356, guid: 980c7a95651a6aa48a33e059adcc93e7,
         type: 3}
@@ -1271,15 +1271,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: trophy
       objectReference: {fileID: 0}
+    - target: {fileID: 8898621117382831107, guid: 33e1d971fb54ac149a41331006a15f45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8898621117382831111, guid: 33e1d971fb54ac149a41331006a15f45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 719
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8898621117382831111, guid: 33e1d971fb54ac149a41331006a15f45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 404.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8898621117382831111, guid: 33e1d971fb54ac149a41331006a15f45,
         type: 3}
@@ -1505,7 +1510,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fish.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 473157480}
     - target: {fileID: 3814500601464486903, guid: 76c682e4ac6ee7e45aeff1d0e24c3862,
         type: 3}
       propertyPath: fish.Array.data[2]
