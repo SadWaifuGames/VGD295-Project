@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BasicTutorial : MonoBehaviour
 {
     public GameObject firstFish, secondFish, thirdFish, fourthFish, fifthFish, trophy;
     public Text textOne, textTwo, textThree, textFour, textFive;
-    public Button btnOne, btnTwo, btnThree, btnFour, btnFive;    
+    public Button btnOne, btnTwo, btnThree, btnFour;    
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class BasicTutorial : MonoBehaviour
         btnTwo.gameObject.SetActive(false);
         btnThree.gameObject.SetActive(false);
         btnFour.gameObject.SetActive(false);
-        btnFive.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -52,11 +53,37 @@ public class BasicTutorial : MonoBehaviour
         
         secondFish.SetActive(false);
         thirdFish.SetActive(false);
-        
+        fourthFish.SetActive(true);
+        fifthFish.SetActive(true);
         textTwo.gameObject.SetActive(false);
-        
+        textThree.gameObject.SetActive(true);
+        Invoke("ShowX", 2f);
         btnTwo.gameObject.SetActive(false);
         btnThree.gameObject.SetActive(true);
+    }
+
+    void ShowX()
+    {
+        textFour.gameObject.SetActive(true);
+    }
+
+    public void ButtonThree()
+    {
+
+        fourthFish.SetActive(false);
+        fifthFish.SetActive(false);
+        trophy.gameObject.SetActive(true);
+        firstFish.SetActive(true);
+        textThree.gameObject.SetActive(false);
+        textFour.gameObject.SetActive(false);
+        textFive.gameObject.SetActive(true);
+        btnThree.gameObject.SetActive(false);
+        btnFour.gameObject.SetActive(true);
+    }
+
+    public void ButtonFour()
+    {
+        SceneManager.LoadScene("LevelMenu");
     }
 
 }

@@ -112,7 +112,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void loadTutorial()
     {
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene("tutorialBasiic");
     }
 
     public void resetPlayerPrefs()

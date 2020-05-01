@@ -7,7 +7,7 @@ public class MoveTutorial : MonoBehaviour
     bool moveAllowed;
 
 
-
+    private AudioSource source;
     Collider2D col;
 
 
@@ -15,6 +15,7 @@ public class MoveTutorial : MonoBehaviour
     void Start()
     {
         col = GetComponent<Collider2D>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +56,22 @@ public class MoveTutorial : MonoBehaviour
                 moveAllowed = false;
             }
         }
+
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Trophy")
+        {
+
+            source.Play();
+            
+
+        }
+
+
+
+
 
     }
 }
